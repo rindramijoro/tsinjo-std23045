@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tsinjo</title>
+</head>
+<body>
+<form th:action="@{/Donation}" th:object="${newDonation}" method="post">
+    email: <input type="text" th:field="*{email}" /><br>
+    Moyen de Payment:
+    <select th:field="*{method}">
+        <option value="MVOLA">MVola</option>
+        <option value="ORANGE_MONEY">Orange Money</option>
+    </select><br>
+    Référence: <input type="text" th:field="*{reference}" /><br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

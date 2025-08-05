@@ -1,0 +1,1 @@
+create type payment_type as enum("orange_money","mvola");
